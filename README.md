@@ -9,14 +9,25 @@ In your pom.xml add the following dependency:
 <dependency>
 	<groupId>io.github.allanmarques83</groupId>
 	<artifactId>spring-mock-rest</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.4</version>
 </dependency>
 ```
 
 ## Usage:
-1 . Add a .json file (fake json response body) in the resources path of spring framework.
+1 . Apply the annotation @EnableRestMock in your SpringBoot application class. E.g:
+```java
+@SpringBootApplication
+@EnableRestMock
+public class MyApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+}
+```
 
-2 . In your Rest controller or client class, add the annotation below in the desired method. E.g:
+2 . Add a .json file (fake json response body) in the resources path of spring framework.
+
+3 . In your Rest controller or client class, add the annotation below in the desired method. E.g:
 
 ```java
 @GetMapping("/test")
@@ -30,7 +41,7 @@ If you call the endpoint service: /test?mockId=123456 the response is gonna be y
 ## Multiple mock for the same REST operation:
 ```java
 @MockRestValues({
-    @MockValue(mockId="testFake1", response="mockrest/test_fake.json", statusCode=400)
+    @MockValue(mockId="testFake1", response="mockrest/test_fake.json", statusCode=400),
     @MockValue(mockId="testFake2", response="mockrest/test_fake.json", statusCode=401)
 })
 public ResponseEntity<String> someMethod(@RequestParam(required=false) String mockId) {

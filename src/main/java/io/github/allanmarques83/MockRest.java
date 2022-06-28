@@ -11,7 +11,6 @@ import java.lang.annotation.Target;
 @Documented
 /**
  * Produces a mock for a given REST controller and REST client.
- * Attention: the return type of your method must always be a ResponseEntity<T>
  * 
  * @param mockId specify any ID for that mock and pass, as one of the function arguments, a String with that variable name.
  * @param response the path of the .json file in the spring project's resource folder.

@@ -7,7 +7,6 @@ import java.lang.annotation.Target;
 
 /**
  * Produces multiple mocks for REST controllers and REST clients.
- * Attention: the return type of your method must always be a ResponseEntity<T>
  * 
  * @param mockId specify any ID for that mock and pass, as one of the function arguments, a String with that variable name.
  * @param response the path of the .json file in the spring project's resource folder.
@@ -17,7 +16,7 @@ import java.lang.annotation.Target;
  * <p>Example:</p>
  * <pre class="code">
  *&#64;MockRestValues({
- *  &#64;MockValue(mockId="123456", response="some_file1.json", statusCode=400)
+ *  &#64;MockValue(mockId="123456", response="some_file1.json", statusCode=400),
  *  &#64;MockValue(mockId="654321", response="some_file2.json", statusCode=401)
  *})
  *public ResponseEntity&lt;String&gt; someMethod(@RequestParam(required=false) mockId) {
