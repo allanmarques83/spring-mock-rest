@@ -36,7 +36,7 @@ If you calling the endpoint service: /test?mockId=123456 the response is gonna b
 public ResponseEntity<String> someMethod(@RequestParam(required=false) String mockId) {
     return ResponseEntity.ok("real response");
 }
-
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
