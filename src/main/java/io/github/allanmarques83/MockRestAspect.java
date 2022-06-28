@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -61,6 +60,9 @@ public class MockRestAspect {
     }
 
     private MockValue isMockIdPresent(MockRestValues mocks, String arg) {
-        return Arrays.stream(mocks.value()).filter(mock -> mock.mockId().equals(arg)).findFirst().orElse(null);
+        for(MockValue mock : mocks.value()) {
+            if(mock.mockId().equals(arg)) return mock;
+        }
+        return null;
     }
 }
