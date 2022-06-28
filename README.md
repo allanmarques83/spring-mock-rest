@@ -14,20 +14,20 @@ In your pom.xml add the following dependency:
 ```
 
 ## Usage:
-1 . Add a .json file (fake json response body) in the resource path of spring framework.
+1 . Add a .json file (fake json response body) in the resources path of spring framework.
 
-2 . In your Rest controller or client class add the annotation below in desired method. E.g:
+2 . In your Rest controller or client class, add the annotation below in the desired method. E.g:
 
 ```java
 @GetMapping("/test")
-@MockRest(mockId="123456", response="fake_response.json", statusCode=400)
+@MockRest(mockId="123456", response="your_file.json", statusCode=400)
 public ResponseEntity<String> someMethod(@RequestParam(required=false) String mockId) {
     return ResponseEntity.ok("real response");
 }
 ```
-If you calling the endpoint service: /test?mockId=123456 the response is gonna be your mock with the http status code.
+If you call the endpoint service: /test?mockId=123456 the response is gonna be your mock with the http status code 400.
 
-## Multiple mock for the same rest:
+## Multiple mock for the same REST operation:
 ```java
 @MockRestValues({
     @MockValue(mockId="testFake1", response="mockrest/test_fake.json", statusCode=400)
