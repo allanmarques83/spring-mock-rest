@@ -88,7 +88,7 @@
         <connection>scm:git:git://github.com/allanmarques83/spring-mock-rest.git</connection>
         <developerConnection>scm:git:git@github.com:allanmarques83/spring-mock-rest.git</developerConnection>
         <url>https://github.com/allanmarques83/spring-mock-rest</url>
-        <tag>spring-mock-rest-1.0.0</tag>
+        <tag>https://github.com/allanmarques83/spring-mock-rest.git</tag>
     </scm>
 
 </project>
