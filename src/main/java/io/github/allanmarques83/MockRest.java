@@ -4,9 +4,12 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
- 
+
+import org.springframework.context.annotation.Import;
+
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
+@Import(MockRestAspect.class)
 /**
  * Produces a mock for a given REST controller and REST client.
  * Attention: the return type of your method must always be a ResponseEntity<T>

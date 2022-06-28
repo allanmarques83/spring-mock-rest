@@ -28,6 +28,7 @@ import java.lang.annotation.Target;
 */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
+@Import(MockRestAspect.class)
 public @interface MockRestValues {
     MockValue[] value();
 }
