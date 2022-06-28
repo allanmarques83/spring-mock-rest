@@ -4,7 +4,7 @@
 
 	<groupId>io.github.allanmarques83</groupId>
 	<artifactId>spring-mock-rest</artifactId>
-	<version>1.1.1-SNAPSHOT</version>
+	<version>1.1.1</version>
     <name>spring-mock-rest</name>
     <url>https://github.com/allanmarques83/spring-mock-rest</url>
     <description>Produces a mock for REST controllers and REST clients </description>
@@ -144,7 +144,7 @@
         <url>https://github.com/allanmarques83/spring-mock-rest</url>
         <connection>scm:git:https://allanmarques83:${git.token}@github.com/allanmarques83/spring-mock-rest.git</connection>
         <developerConnection>scm:git:https://allanmarques83:${git.token}@github.com/allanmarques83/spring-mock-rest.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>HEAD16</tag>
     </scm>
 
 </project>
