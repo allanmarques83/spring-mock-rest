@@ -85,10 +85,10 @@
     </distributionManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/allanmarques83/spring-mock-rest.git</connection>
-        <developerConnection>scm:git:git@github.com:allanmarques83/spring-mock-rest.git</developerConnection>
         <url>https://github.com/allanmarques83/spring-mock-rest</url>
-        <tag>https://github.com/allanmarques83/spring-mock-rest.git</tag>
+        <connection>scm:git:https://github.com/allanmarques83/spring-mock-rest.git</connection>
+        <developerConnection>scm:git:git@github.com:allanmarques83/spring-mock-rest.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
 
 </project>
