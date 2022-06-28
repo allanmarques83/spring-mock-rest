@@ -5,6 +5,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import org.springframework.context.annotation.Import;
+
 /**
  * Produces multiple mocks for REST controllers and REST clients.
  * Attention: the return type of your method must always be a ResponseEntity<T>
