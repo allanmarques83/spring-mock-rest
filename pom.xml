@@ -4,7 +4,7 @@
 
 	<groupId>io.github.allanmarques83</groupId>
 	<artifactId>spring-mock-rest</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.0-SNAPSHOT</version>
     <name>spring-mock-rest</name>
     <url>https://github.com/allanmarques83/spring-mock-rest</url>
     <description>Produces a mock for REST controllers and REST clients </description>
@@ -124,8 +124,8 @@
 						<goal>sign</goal>
 					</goals>
 					<configuration>
-						<keyname>0x2D19565B</keyname>
-						<passphraseServerId>0x2D19565B</passphraseServerId>
+						<keyname>${gpg.token}</keyname>
+						<passphraseServerId>${gpg.token}</passphraseServerId>
 					</configuration>
 					</execution>
 				</executions>
