@@ -13,8 +13,10 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 
 @Aspect
+@Component
 public class MockRestAspect {
     @Around("@annotation(MockRest)")
     public Object getMock(ProceedingJoinPoint joinPoint, MockRest MockRest) throws Throwable {
