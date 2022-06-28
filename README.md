@@ -9,7 +9,7 @@ In your pom.xml add the following dependency:
 <dependency>
 	<groupId>io.github.allanmarques83</groupId>
 	<artifactId>spring-mock-rest</artifactId>
-	<version>1.1.4</version>
+	<version>1.1.5</version>
 </dependency>
 ```
 
