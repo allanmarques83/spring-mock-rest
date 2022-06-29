@@ -38,11 +38,11 @@ public ResponseEntity<String> someMethod(@RequestParam(required=false) String mo
 ```
 If you call the endpoint service: /test?mockId=123456 the response is gonna be your mock with the http status code 400.
 
-## Multiple mock for the same REST operation:
+## Multiple mocks for the same REST operation:
 ```java
 @MockRestValues({
-    @MockValue(mockId="testFake1", response="mockrest/test_fake.json", statusCode=400),
-    @MockValue(mockId="testFake2", response="mockrest/test_fake.json", statusCode=401)
+    @MockRest(mockId="testFake1", response="mockrest/test_fake1.json", statusCode=400),
+    @MockRest(mockId="testFake2", response="mockrest/test_fake2.json", statusCode=401)
 })
 public ResponseEntity<String> someMethod(@RequestParam(required=false) String mockId) {
     return ResponseEntity.ok("real response");
